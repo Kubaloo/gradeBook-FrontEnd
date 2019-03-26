@@ -1,0 +1,44 @@
+
+
+<div class="col-md-6">
+  <h2> Groups Details</h2>
+  <div class="container-fluid">   
+      <br/>
+      <router-outlet></router-outlet>
+      </div>
+     <table class="table table-striped">
+    <thead>
+     <tr>
+      <th class="hidden">Id</th>
+      <th>Group name</th>
+      <th>Choose teacher</th>
+  
+  
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let group of groups">
+        
+      <td class="hidden"></td>
+      <td>{{group.groupId}}</td>
+  
+    <td>
+        <select (ngModel)="selectedTeacher" (change)="onChange($event)">
+  
+        <option *ngFor="let teacher of teachers"> {{teacher.teachersName}}</option>
+       
+        </select>
+        
+    </td>
+    <td>
+      <button class="btn btn-success" (click)="saveTeacherToGroup(group.groupId)">save</button>
+    </td>
+
+
+
+    </tr>
+    </tbody>
+   
+  </table>
+ 
+  </div>

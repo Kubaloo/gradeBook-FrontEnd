@@ -1,0 +1,21 @@
+<div class="row col-sm-6" style="max-width:350px;">
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input type="text"  class="form-control" name="studentName" required="required" [(ngModel)]="name">
+  </div>
+  <div class="form-group">
+    <label for="surname">Surname</label>
+    <input type="text" class="form-control"  name="surname" required="required" [(ngModel)]="surname"/>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control"  name="email" required="required"  [(ngModel)]="email"/>
+  </div>
+  <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" class="form-control"  name="subject" required="required"  [(ngModel)]="subject"/>
+    </div>
+  <div class="form-group">
+    <button class="btn btn-primary" (click)="addTeacherToList(username)">Add</button>
+  </div>
+</div>

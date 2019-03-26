@@ -1,0 +1,21 @@
+<div class="col-md-6">
+    <h2> Teacher Details</h2>
+    <div class="container-fluid">   
+    <table class="table table-striped">
+      <thead>
+       
+        <th class="hidden">Id</th>
+        <th>Group name</th>
+        <th></th>
+     
+    </thead>
+      <tbody>
+           <tr *ngFor="let group of groups">
+      
+        <td>{{group?.groupId}}</td>
+        <td><button class="btn btn-danger" (click)="showStudents(group)">Show students</button></td>  
+      </tr>
+    
+      </tbody>
+    </table>
+    </div>
